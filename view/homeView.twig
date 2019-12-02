@@ -1,0 +1,74 @@
+{% extends "template.twig" %}
+{% block head %}<title>Acceuil</title>{% endblock %}
+
+{% block content %}
+<br><br>
+<!-- TEXT INTRODUCTION -->
+<h3 class= "justify-content-sm-center justify-content-md-center justify-content-lg-center" style = "text-align: center" >Vous habitez à Paris et tout vous semble gris? Vous rêvez d’un jardin? Regardez bien autour de vous et renseignez-vous : il y a sûrement
+  plus de possibilités que vous ne le pensez pour vous trouver ou vous créer un petit coin de paradis! "Urban Garden" vous offre des parcelles de verdure en pleine ville, on y cultive non seulement des légumes et des fruits mais aussi
+  les liens sociaux. Ainsi, dans le cadre du programme de développement durable de tels jardins remplis complètement les aspects, écologique, économique et social.
+</h3>
+<!-- SLIDER -->
+<br><br>
+    <div class="container" id="SliderBox">
+            <!-- BTN CONTENT -->
+            <div class="row justify-content-sm-center justify-content-md-center justify-content-lg-center justify-content-xs-center">
+                  <div class="Button previous" id="ButtonLeft"><i class="fas fa-chevron-circle-left"></i></div>
+                  <div class="Button pause" id="pause"><i class="fas fa-pause-circle"></i></div>
+                  <div class="Button play" id="play"><i class="fas fa-play-circle"></i></div>
+                  <div class="Button next" id="ButtonRight"><i class="fas fa-chevron-circle-right"></i></div>
+            </div>
+            <!-- SLIDE 1 -->
+            <div class="Slide row justify-content-xs-center justify-content-sm-center justify-content-md-center justify-content-lg-center" id="Slide-1">
+                  <h1 class= "justify-content-sm-center justify-content-md-center justify-content-lg-center">Impact écologique</h1><br>
+                  <div class="row">
+                        <div class="SlideImage col-lg-12">
+                            <img src="public/images/impact_écologique.jpg" alt="ecologie">
+                        </div>
+                        <h3 class="SlideText col-lg-12 "><br>En participant à la création d'un jardin biologique vous participez à la biodiversité de la ville de Paris.</h3>
+                </div>
+            </div>
+            <!-- SLIDE 2 -->
+              <div class="Slide row justify-content-sm-center justify-content-md-center justify-content-lg-center" id="Slide-2">
+                  <h1 class= "justify-content-sm-center justify-content-md-center justify-content-lg-center">Impact social</h1>
+                  <div class="row">
+                      <div class="SlideImage col-lg-12">
+                            <img src="public/images/impact_social.png" alt="social">
+                      </div>
+                      <h3 class="SlideText col-lg-12 ">En participant à la création d'un jardin vous apprenez à faire ensemble et créer des liens avec les habitants de votre quartier.</h3>
+                  </div>
+            </div>
+            <!-- SLIDE 3 -->
+            <div class="Slide row justify-content-sm-center justify-content-md-center justify-content-lg-center" id="Slide-3">
+                <h1 class= "justify-content-sm-center justify-content-md-center justify-content-lg-center">Impact économique</h1>
+                <div class="row">
+                    <div class="SlideImage col-lg-12">
+                          <img src="public/images/impact_economique.png" alt="social">
+                    </div>
+                    <h3 class="SlideText col-lg-12 ">En participant à la création d'un jardin vous apprenez à faire ensemble et créer des liens avec les habitants de votre quartier.</h3>
+                </div>
+            </div>
+    </div>
+
+
+<br><br><br>
+<h1 style= "font-family:georgia,garamond,serif;font-size:40px;font-style:italic;">Ce jardin viens d'ouvrir on a besoin de vous!</h1>
+<br><br>
+<!-- LAST POST CONTAINER -->
+<div class="container">
+            <h1 class="list-group-item-heading"> {{ lastPost.title }} </h1>
+            <h1 class="list-group-item-heading"> Situé aux:{{ lastPost.adress_street }} {{ lastPost.adress_city }}</h1>
+            <em class="col-lg-12">créer le {{ lastPost.date_creation_fr }}</em>
+            <p class="col-lg-12">{{ extraitContent | raw }} (...)</p>
+            <button type="button" class="btn btn-success" ><a class="text-white" href="index.php?action=post&amp;id={{ lastPost.id }}" >Savoir plus</a></button>
+            <br><br>
+</div>
+<div class="row justify-content-sm-center justify-content-md-center justify-content-lg-center">
+  <img src="public/images/perso-p5.png"  alt="personnage">
+</div>
+<!-- IMAGE AND BUTONS -->
+<div class="row justify-content-sm-center justify-content-md-center justify-content-lg-center">
+  <button type="button" style= "margin:10px;" class="btn btn-success btn-lg"><a class="text-white" href="index.php?action=meteo" >Météo et infos</a></button>
+  <button type="button" style= "margin:10px;" class="btn btn-success btn-lg"><a class="text-white" href="index.php?action=login" >Créer son jardin</a></button>
+</div>
+{% endblock %}

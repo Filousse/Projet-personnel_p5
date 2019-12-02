@@ -1,0 +1,24 @@
+{% extends "template.twig" %}
+{% block head %}<title>supprimé les commentaires</title>{% endblock %}
+{% block content %}
+<br><br><br>
+<h1>Modifier les commentaires:</h1>
+<br><br>
+<button class="btn btn-success col-sm-3 col-sm-offset-7 col-lg-2 col-lg-offset-9"></span><a class="text-white" href="index.php?action=dashboard"> Tableau de bord</a></button>
+<br><br><br><br>
+<div class="container">
+      <table class="table table-striped">
+                  <tr>
+                      <th class='col-sm-6 col-sm col-lg-4 col-lg' style="text-align:center" >Auteurs et date des commentaires:</th>
+                  </tr>
+{% for comment in comments %}
+                <tr>
+                  <td>{{ comment.author }}</strong> le {{ comment.comment_date_fr }}</td>
+                  <td>{{ comment.comment|raw }}</td>
+                  <td><a href="index.php?action=deletecomment&amp;id={{ comment.id }}">Supprimer</a></td>
+{% endfor %}
+                </tr>
+      </table>
+</div>
+
+{% endblock %}

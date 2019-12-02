@@ -1,0 +1,26 @@
+{% extends "template.twig" %}
+{% block head %}<title>Commentaire signalés</title>{% endblock %}
+
+{% block content %}
+<br><br>
+<h1>Supprimé les commentaires signaler:</h1>
+<br><br>
+<button class="btn btn-success col-sm-3 col-sm-offset-7 col-lg-2 col-lg-offset-9"></span><a class="text-white" href="index.php?action=dashboard">Tableau de bord</a></button>
+<br><br><br>
+<div class="container">
+    <table class="table table-striped">
+        <tr>
+          <th>Auteur du commentaire</th>
+          <th>Commentaire</th>
+          <th>Action</th>
+        </tr>
+    {% for comment in notifiedComments %}
+        <tr>
+            <td>{{ comment.author }}</td>
+            <td>{{ comment.comment|raw }}</td>
+            <td><a href="index.php?action=deletecomment&amp;id={{ comment.id }}">Supprimer</a></td>
+        </tr>
+        {% endfor %}
+    </table>
+  </div>
+{% endblock %}

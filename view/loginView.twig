@@ -1,0 +1,42 @@
+{% extends "template.twig" %}
+{% block head %}<title>Connexion</title>{% endblock %}
+
+{% block content %}
+<div class="loginBox" id="loginBox">
+    <br><br><br>
+    <div class="d-flex justify-content-center">
+      <button type="button" class="btn btn-success btn-lg inscription">Créer un jardin</button>
+      <button type="button" class="btn btn-success btn-lg connection">Gérer mon jardin</button>
+    </div>
+
+    <div id="connectionContent" class="ConnectionContent">
+        <h1>Veuillez vous connecter:</h1>
+        <div class="container" style= "max-width: 400px">
+          <form action="index.php?action=admin" method="post">
+            <label >Pseudo:</label>
+            <input class="form-control" type="text" name="UName" placeholder="Entrez votre pseudo" required><br>
+            <label >Mot de passe:</label>
+            <input class="form-control" type="password" name="Password" placeholder="Entrez votre mot de passe" required><br>
+            <button type="submit" class="btn btn-primary">Se connecter</button>
+          </form><br>
+        </div>
+    </div>
+
+    <div id="inscriptionContent" class="inscriptionContent">
+        <h1>Veuillez vous inscrire:</h1>
+        <div class="container" style= "max-width: 400px">
+          <form action="index.php?action=newUser" method="post">
+            <label >Créer votre pseudo:</label>
+            <input class="form-control" type="text" name="NewName" placeholder="Entrez votre pseudo" required><br>
+            <label >Créer votre mot de passe:</label>
+            <input class="form-control" type="password" name="NewPassword" placeholder="Entrez votre mot de passe" required><br>
+            <button type="submit" class="btn btn-primary">S'inscrire</button>
+          </form><br>
+        </div>
+    </div><br><br>
+    <div class="row justify-content-sm-center justify-content-md-center justify-content-lg-center">
+      <img class="justify-content-sm-center justify-content-md-center justify-content-lg-center" src="public/images/arrosoire.png"  alt="personnage">
+    </div>
+</div>
+<br><br><br>
+{% endblock %}

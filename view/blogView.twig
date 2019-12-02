@@ -1,0 +1,11 @@
+{% extends "template.twig" %}
+{% block head %}<title>liste des jardins</title>{% endblock %}
+
+{% block content %}
+<br><br><br>
+<h1>Choisisez votre jardin et discutez avec l'équipe de jardiniers:</h1>
+<br><br><br>
+    {% for data in posts %}
+        <a href="index.php?action=post&amp;id={{ data.id }}" class=" container list-group-item bg-success text-white" ><strong>{{ data.title }}</strong> <br><em>Situé aux: {{ data.adress_street }} {{ data.adress_city }}</em> </a>
+    {% endfor %}
+{% endblock %}

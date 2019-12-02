@@ -1,0 +1,58 @@
+{% extends "template.twig" %}
+{% block head %}<title>Météo et infos</title>{% endblock %}
+
+{% block content %}
+<br><br>
+<h1>Arrosez et protégez vos plantes en fonction du temps! </h1><br><br>
+<!-- METEO -->
+<div class="container">
+  <caption>
+    <h4>Météo du jour:</h4>
+  </caption>
+    <table class="table table-bordered table-striped table-condensed">
+     <thead>
+        <tr>
+              <th style="text-align:center" >Ville</th>
+              <th style="text-align:center" >Paris</th>
+        </tr>
+     </thead>
+     <tbody>
+               <tr>
+                    <td class='col-sm-6 col-sm col-lg-4 col-lg ' style="text-align:center" >Température moyenne</td>
+                    <td><p type="text" id="temp"></td>
+              </tr>
+              <tr>
+                  <td class='col-sm-6 col-sm col-lg-4 col-lg ' style="text-align:center" >Température minimum</td>
+                  <td><p type="text" id="tempMin"></td>
+             </tr>
+              <tr>
+                  <td class='col-sm-6 col-sm col-lg-4 col-lg ' style="text-align:center" >Température maximum</td>
+                  <td><p type="text" id="tempMax"></td>
+              </tr>
+              <tr>
+                <td class='col-sm-6 col-sm col-lg-4 col-lg ' style="text-align:center" >Taux d'humidité</td>
+                <td><p type="text" id="humidity"></td>
+              </tr>
+              <tr>
+                <td class='col-sm-6 col-sm col-lg-4 col-lg ' style="text-align:center" >Pression de l'air en pascale</td>
+                <td><p type="text" id="pressure"></td>
+              </tr>
+              <tr>
+                <td class='col-sm-6 col-sm col-lg-4 col-lg ' style="text-align:center" >Etat du ciel</td>
+                <td><p type="text" id="description"></td>
+              </tr>
+              <tr>
+                <td class='col-sm-6 col-sm col-lg-4 col-lg ' style="text-align:center" >Vitesse du vent</td>
+                <td><p type="text" id="wind"></td>
+              </tr>
+      </tbody>
+    </table>
+</div>
+<!-- INFOS -->
+<br><br>
+<h1>Calendrier des semis:</h1>
+<h3>Vivez cultivez et mangez au rythme des saisons </h3><br><br>
+<div class="row justify-content-sm-center justify-content-md-center justify-content-lg-center">
+    <img src="public/images/legumes-saison.jpg"  class="d-block w-50" alt="info legumes de saisons" >
+</div>
+{% endblock %}

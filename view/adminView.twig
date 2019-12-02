@@ -1,0 +1,35 @@
+{% extends "template.twig" %}
+{% block head %}<title>Tableau de baord</title>{% endblock %}
+{% block content %}
+
+      <br><br>
+      <button type="button" class="btn btn-warning col-sm-2 col-sm-offset-9 col-lg-1 col-lg-offset-10" ><span class="glyphicon glyphicon-user"></span><a class="text-white" href="index.php?action=logout">  Se déconnecter</a></button>
+      <br>
+      <h1> Bienvenue dans votre administration {{ userName }} :</h1>
+      <div class="container">
+         <table class="table table-striped">
+              <tr>
+                    <th class='col-sm-6 col-sm col-lg-4 col-lg ' style="text-align:center" >Noms des chapitres:</th>
+              </tr>
+        {% for data in garden %}
+              <tr>
+                    <td>{{ data.title }}</td>
+                    <td>
+                          <a href="index.php?action=openupdate&amp;id={{ data.id }}">Modifier le jardin</a>
+                    </td>
+                    <td>
+                          <a href="index.php?action=comment&amp;id={{ data.id }}">Gérer les commentaires</a>
+                    </td>
+                    <td>
+                          <a class="text-danger" href="index.php?action=delete&amp;id={{ data.id }}&amp;user_id={{ userId }}">Supprimer votre jardin</a>
+                    </td>
+                    </td>
+              </tr>
+        {% endfor %}
+      </table>
+</div>
+<br><br>
+<button class="btn btn-success col-sm-3 col-sm-offset-6 col-lg-2 col-lg-offset-7"><span class="glyphicon glyphicon-comment"></span><a class="text-white" href="index.php?action=openNotify"> Commentaires signalés </a></button>
+<br><br><br><br>
+
+{% endblock %}

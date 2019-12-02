@@ -1,0 +1,13 @@
+{% extends "template.twig" %}
+{% block head %}<title>Modification confirmé</title>{% endblock %}
+
+{% block content %}
+<br><br><br><br><br><br>
+<div class="container">
+    <br><br>
+    <h1>Votre jardin a bien été modifié.</h1>
+    <br>
+    <button class="btn btn-success btn-lg"><span class="glyphicon glyphicon-user"></span><a class="text-white" href="index.php?action=dashboard&amp;id={{ user.id }}"> Tableau de bord</a></button>
+    <br><br>
+</div>
+{% endblock %}

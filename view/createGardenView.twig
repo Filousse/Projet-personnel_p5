@@ -1,0 +1,44 @@
+{% extends "template.twig" %}
+{% block head %}<title>Création du jardin</title>{% endblock %}
+
+{% block content %}
+<br><br>
+<h1> Veuillez remplir tout les champs pour créer et mettre en ligne votre jardin urbain.</h1>
+<br><br>
+<div class="container">
+      <form action="index.php?action=sendGarden" method="post"><br>
+        <div class="row">
+          <!-- NAME GARDEN -->
+          <div class="col-lg-6">
+            <label for="nomDuJardin">Noms de votre jardin communautaire:</label><br>
+            <input type="text" class="form-control" id="author" name="title">
+          </div>
+            <!-- EMAIL -->
+            <div class="col-lg-6">
+              <label for="email">Email de l'administrateur du jardin:</label>
+              <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com" name='email'>
+            </div>
+        </div><br>
+        <!-- DESCRIPTION GARDEN -->
+        <div class="form-group">
+            <label for="comment">Description du jardin et son projet:</label><br>
+            <textarea rows="20" name="text"></textarea>
+        </div>
+        <!-- ADRESSE JARDIN -->
+        <div class="row">
+          <div class="col-lg-6">
+            <label for="rue">Adresse du jardin:</label>
+            <input type="text" class="form-control" id="author" name="adress">
+          </div>
+          <div class="col-lg-6">
+            <label for="rue">Ville:</label>
+            <input type="text" class="form-control" id="author" name="city">
+          </div>
+        </div><br>
+        <!-- SUBMIT -->
+        <div>
+          <input type="submit" class="btn-lg btn-success"/>
+        </div><br>
+      </form>
+</div>
+{% endblock %}
