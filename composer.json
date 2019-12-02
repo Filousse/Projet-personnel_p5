@@ -1,0 +1,19 @@
+{
+    "name": "thibault/p5",
+    "description": "Projet 5 de la formation développeur web junior Openclassrooms 2019 - Thibault Brasseur",
+    "authors": [
+        {
+            "name": "Thibault Brasseur",
+            "email": "brasseur.blz@gmail.com"
+        }
+    ],
+    "autoload": {
+      "psr-4": {
+        "P5\\Model\\Frontend\\": "model/frontend",
+        "P5\\Model\\Backend\\": "model/backend"
+      }
+    },
+    "require": {
+        "twig/twig": "^2.0"
+    }
+}
