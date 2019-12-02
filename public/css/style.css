@@ -1,0 +1,60 @@
+/* ------------- TEMPLATE  ------------- */
+html, body {
+  margin: 0px;
+  display: block;
+}
+
+footer {
+  width: 100%;
+  height: 200px;
+}
+header {
+  width: 100%;
+}
+.logo{
+  margin: 20px;
+  border-radius: 10px;
+}
+.logo-container{
+background-color:rgb(20,190,101);
+margin: 0px;
+
+}
+nav{
+  margin-bottom: 0px;
+}
+
+.Button{
+  margin: 20px;
+}
+.container {
+ border: 2px solid black;
+ border-radius: 6px;
+
+ text-align: center;
+}
+h1, h3{
+    text-align:center;
+    font-family:georgia,garamond,serif;
+    font-size:40px;
+    font-style:italic;
+}
+/* ------------- SLIDER ------------- */
+
+#play {
+  display: none;
+}
+
+/* ==================  LOGIN ========= */
+.inscription{
+  margin: 20px;
+}
+.connection{
+  margin: 20px;
+}
+#inscriptionContent {
+  display: none;
+}
+#connectionContent {
+  display: none;
+}
